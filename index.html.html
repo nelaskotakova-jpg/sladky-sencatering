@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sladký sen — Sladký catering</title>
+  <meta name="description" content="Sladký sen — sladký catering na svatby, oslavy a firemní akce. Ručně vyráběné dezerty, candy bary a servis na míru." />
+  <style>
+    :root{
+      --bg:#fffaf6; --accent:#f6c6d3; --accent-2:#ffd9b8; --text:#3b2f2f; --muted:#6b5a56;
+      --card:#ffffff; --radius:18px; --maxw:1100px;
+      --shadow: 0 8px 30px rgba(59,47,47,0.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:var(--text);-webkit-font-smoothing:antialiased}
+    .container{max-width:var(--maxw);margin:40px auto;padding:24px}
+
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+    .logo h1{margin:0;font-size:20px;color:#6b2b3a}
+    .brand{flex:1}
+    nav{display:flex;gap:14px}
+    a.btn{background:#6b2b3a;color:#fff;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .hero .title{background:linear-gradient(90deg,transparent,rgba(0,0,0,0.02));padding:28px;border-radius:20px;box-shadow:var(--shadow)}
+    .title h2{margin:0;font-size:36px}
+    .title p{color:var(--muted);margin:12px 0 0}
+    .cta{margin-top:18px}
+    .cta a{display:inline-block;margin-right:10px}
+
+    .card{background:var(--card);padding:18px;border-radius:16px;box-shadow:var(--shadow)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .service{padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff,#fffefc)}
+    .service h4{margin:8px 0}
+
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+    .gallery img{width:100%;height:170px;object-fit:cover;border-radius:12px}
+
+    .about{display:flex;gap:22px;align-items:center;margin-top:26px}
+    .about .text{flex:1}
+
+    footer{margin-top:36px;padding:18px;border-radius:14px;background:linear-gradient(180deg,#fff,#fffefc);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .services{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .gallery img{height:120px}
+      .services{grid-template-columns:1fr}
+    }
+
+    .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #eee;margin-top:8px}
+    .contact-form button{margin-top:10px;padding:12px 16px;border-radius:12px;border:0;background:#6b2b3a;color:#fff;font-weight:700}
+
+    .badge{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:6px 10px;border-radius:999px;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><h1>ŠS</h1></div>
+      <div class="brand">
+        <div style="display:flex;align-items:baseline;gap:8px">
+          <h3 style="margin:0">Sladký sen</h3>
+          <span style="color:var(--muted)">— sladký catering</span>
+        </div>
+        <div style="color:var(--muted);font-size:14px;margin-top:6px">Ručně vyráběné dezerty, candy bary a servis na míru</div>
+      </div>
+      <nav>
+        <a class="btn" href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="title card">
+        <h2>Proměňujeme každou oslavu ve <span style="color:#b34a5a">sladký</span> zážitek</h2>
+        <p>Sladký sen nabízí originální dezerty, krásné sweet bary a kompletní servis pro svatby, narozeniny i firemní akce. Každý produkt pečeme s láskou a dbáme na vzhled i chuť.</p>
+        <div class="cta">
+          <a href="#kontakt" class="btn">Objednat konzultaci</a>
+          <a href="#galerie" style="text-decoration:none;color:var(--muted);font-weight:700">Prohlédnout galerii →</a>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h4 style="margin:0 0 8px">Rychlé info</h4>
+        <p style="margin:0 0 8px;color:var(--muted)">Svatby • Firemní akce • Candy bary • Sezónní nabídky</p>
+        <div style="font-size:14px;color:var(--muted)">
+          <strong>Kontakt:</strong><br>
+          info@sladkysen.cz<br>
+          +420 606 506 506
+        </div>
+        <div style="margin-top:10px"><span class="badge">Doprava a komplet. servis</span></div>
+      </aside>
+    </section>
+
+    <section class="card" style="margin-top:26px">
+      <h3 style="margin-top:0">Naše nabídka</h3>
+      <div class="services">
+        <div class="service">
+          <h4>Mini dezerty & dortíky</h4>
+          <p style="color:var(--muted)">Balance mezi chutí a detailní dekorací — ideální pro raut i sladké sousto k šálku kávy.</p>
+        </div>
+        <div class="service">
+          <h4>Candy bary</h4>
+          <p style="color:var(--muted)">Sladké stoly laděné do tématu vaší akce — barvy, dekorace a možnost brandingu.</p>
+        </div>
+        <div class="service">
+          <h4>Svatební zakázky</h4>
+          <p style="color:var(--muted)">Kompletní sladké řešení pro svatbu včetně dodání a aranže.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie" class="card" style="margin-top:18px">
+      <h3>Galerie — inspirace</h3>
+      <div class="gallery">
+        <img src="https://source.unsplash.com/featured/?cake" alt="dezert">
+        <img src="https://source.unsplash.com/featured/?macaron" alt="makronka">
+        <img src="https://source.unsplash.com/featured/?cupcake" alt="cupcake">
+        <img src="https://source.unsplash.com/featured/?dessert" alt="dezert2">
+        <img src="https://source.unsplash.com/featured/?wedding-cake" alt="svatebni dort">
+        <img src="https://source.unsplash.com/featured/?sweet-table" alt="sweet bar">
+      </div>
+    </section>
+
+    <section class="about card" style="margin-top:18px">
+      <div class="text">
+        <h3 style="margin-top:0">Kdo stojí za Sladkým snem?</h3>
+        <p style="color:var(--muted)">Jsme parta kreativních pekařů, dekoratérů a event koordinátorů. Každý z nás má svou roli — od chuti přes design až po hladký průběh akce. Vyrábíme ručně, bez zkratky a s důrazem na čerstvost.</p>
+      </div>
+      <div style="width:260px">
+        <div style="background:#fff;padding:14px;border-radius:12px;box-shadow:var(--shadow)">
+          <h4 style="margin:0">Naše hodnoty</h4>
+          <ul style="color:var(--muted);margin-top:8px">
+            <li>Individuální přístup</li>
+            <li>Kvalitní suroviny</li>
+            <li>Precizní prezentace</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="card" style="margin-top:18px">
+      <h3>Kontaktujte nás</h3>
+      <p style="color:var(--muted)">Máte otázky nebo chcete nezávaznou konzultaci? Napište nám nebo zavolejte — rádi se přizpůsobíme.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:12px">
+        <div>
+          <form class="contact-form" action="mailto:info@sladkysen.cz" method="post" enctype="text/plain">
+            <label>Vaše jméno</label>
+            <input type="text" name="name" placeholder="Jméno a příjmení" required>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="vaše@email.cz" required>
+            <label>Co plánujete?</label>
+            <textarea name="message" rows="4" placeholder="Krátký popis akce, počet hostů, datum..." required></textarea>
+            <button type="submit">Odeslat</button>
+          </form>
+        </div>
+        <aside style="align-self:start">
+          <div style="background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:14px;border-radius:12px;color:#5a2430">
+            <strong>Rychlý kontakt</strong>
+            <div style="margin-top:8px;color:var(--muted)">info@sladkysen.cz<br>+420 606 506 506</div>
+            <div style="margin-top:10px;font-size:13px;color:var(--muted)">www.sladkedezertycatering.cz</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div>&copy; Sladký sen — Všechna práva vyhrazena</div>
+      <div style="color:var(--muted)">Navštivte nás: <a href="#galerie" style="text-decoration:none;color:inherit">Galerie</a> • <a href="#kontakt" style="text-decoration:none;color:inherit">Kontakt</a></div>
+    </footer>
+  </div>
+</body>
+</html>
